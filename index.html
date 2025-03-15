@@ -3,9 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ramen Rating App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #ramen-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #ramen-menu img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        #ramen-menu img:hover {
+            border-color: #ff6347;
+        }
+        #ramen-detail {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #new-ramen {
+            margin-top: 20px;
+        }
+        #new-ramen input, #new-ramen textarea {
+            margin-bottom: 10px;
+            width: 200px;
+            padding: 5px;
+        }
+        #new-ramen button {
+            padding: 5px 10px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #new-ramen button:hover {
+            background-color: #e5533d;
+        }
+    </style>
 </head>
 <body>
+    <h1>Ramen Rating App</h1>
+
+    <!-- Ramen Menu -->
+    <div id="ramen-menu"></div>
+
+    <!-- Ramen Details -->
+    <div id="ramen-detail">
+        <img/>
+        <br>
+        <h2 id="detail-name">Ramen Name</h2>
+        <p id="detail-restaurant">Restaurant</p>
+        <p id="detail-rating">Rating: N/A</p>
+        <p id="detail-comment">Comment</p>
+    </div>
+
+    <!-- New Ramen Form -->
+    <form id="new-ramen">
+        <h3>Add New Ramen</h3>
+        <input type="text" id="new-name" placeholder="Ramen Name" required><br>
+        <input type="text" id="new-restaurant" placeholder="Restaurant" required><br>
+        <input type="text" id="new-image" placeholder="Image (e.g., shoyu.jpg)" required><br>
+        <input type="number" id="new-rating" placeholder="Rating (1-5)" min="1" max="5"><br>
+        <textarea id="new-comment" placeholder="Comment"></textarea><br>
+        <button type="submit">Add Ramen</button>
+    </form>
+
     <script src="index.js"></script>
 </body>
 </html>
